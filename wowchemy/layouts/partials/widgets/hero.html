@@ -43,7 +43,7 @@
         {{ else if in (slice "http" "https") $scheme }}
           {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
         {{ end }}
-      <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} class="hero-cta-alt btn-lg pl-md-4">{{ $page.Params.cta_alt.label | markdownify | emojify | safeHTML }} <i class="fas fa-angle-right"></i></a>
+      <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} class="hero-cta-alt btn-lg pl-md-4 hidden">{{ $page.Params.cta_alt.label | markdownify | emojify | safeHTML }} <i class="fas fa-angle-right"></i></a>
       {{ end }}
     </p>
     {{ end }}
